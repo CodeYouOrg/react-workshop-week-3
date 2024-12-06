@@ -1,0 +1,23 @@
+.list {
+  background: var(--c-bg-secondary);
+  border-right: 1px solid #333;
+  margin-right: 2rem;
+  height: 100vh;
+}
+
+.list > li button {
+  border-left: 8px solid transparent;
+  display: block;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    border-left: 8px solid var(--c-highlight);
+    text-decoration: underline;
+  }
+}
+
+.list > li:nth-child(odd) button {
+  background: rgba(0, 0, 0, 0.06);
+}

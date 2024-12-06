@@ -1,3 +1,14 @@
+:root {
+  --c-bg: #94c9a9;
+  --c-bg-secondary: #c6ecae;
+  --c-bg-light: #ceabb1;
+  --c-highlight: #a379c9;
+}
+
+body {
+  background: var(--c-bg);
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr;

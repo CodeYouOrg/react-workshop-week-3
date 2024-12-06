@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 const Recipe = ({
   author,
   cookTime,
@@ -7,7 +9,7 @@ const Recipe = ({
   prepTime,
   steps,
 }) => (
-  <article>
+  <Article>
     <h1>{name}</h1>
     <dl>
       <div>
@@ -43,7 +45,42 @@ const Recipe = ({
         ))}
       </ol>
     </section>
-  </article>
+  </Article>
 )
+
+const Article = styled.article`  
+  background: var(--c-bg-light);
+  border: 1px solid #333;
+  padding: 2rem;
+
+  & > *:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  & h1 {
+    font-size: 2rem;
+  }
+
+  & h2 {
+    font-size: 1.6rem;
+  }
+
+  & dl > div {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  & dt {
+    font-weight: bold;
+    &::after {
+      content: ':';
+    }
+  }
+
+  & ol, ul {
+    list-style: circle;
+    padding-left: 1rem;
+  }
+`
 
 export default Recipe
